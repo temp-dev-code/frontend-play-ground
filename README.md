@@ -9,8 +9,6 @@
 ## 🚀 시작하기
 
 ### 필수 요구사항
-- Node.js 14.0 이상
-- npm 또는 yarn
 
 ### 설치 방법
 
@@ -21,7 +19,6 @@ git clone https://github.com/temp-dev-code/frontend-play-ground.git
 # 디렉토리 이동
 cd frontend-play-ground
 
-# 의존성 설치
 npm install
 ```
 
@@ -39,7 +36,7 @@ frontend-play-ground/
 
 ```bash
 # 개발 서버 실행
-npm start
+npm run dev
 
 # 프로덕션 빌드
 npm run build
@@ -50,9 +47,6 @@ npm test
 
 ## 📚 주요 기술 스택
 
-- JavaScript/TypeScript
-- React (또는 다른 프론트엔드 프레임워크)
-- CSS/SCSS
 
 ## 🤝 기여
 
@@ -70,6 +64,5 @@ npm test
 
 이슈 또는 토론 탭에서 질문해주세요.
 
----
 
 **마지막 업데이트:** 2026년 5월 19일

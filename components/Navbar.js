@@ -1,26 +1,28 @@
-import Link from 'next/link'
+import React from 'react'
 
 export default function Navbar() {
-    return (
-        <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur-lg">
-            <div className="container flex items-center justify-between py-4">
-                <Link href="/" className="flex items-center gap-3">
-                    <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-primary text-white shadow-lg shadow-primary/10">FP</div>
-                    <div>
-                        <p className="text-sm font-semibold tracking-wide text-slate-900">Frontend Play Ground</p>
-                        <p className="text-xs text-slate-500">혁신적인 프론트엔드 동아리</p>
-                    </div>
-                </Link>
-
-                <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
-                    <a href="#about" className="hover:text-primary transition">소개</a>
-                    <a href="#program" className="hover:text-primary transition">프로그램</a>
-                    <a href="#events" className="hover:text-primary transition">행사</a>
-                    <a href="#contact" className="hover:text-primary transition">문의</a>
-                </nav>
-
-                <Link href="#contact" className="btn-brand hidden md:inline-flex">지금 참여하기</Link>
-            </div>
-        </header>
-    )
+  return (
+    <header className="absolute inset-x-0 top-0 z-50">
+      <nav className="flex items-center justify-between p-6 lg:px-8 max-w-7xl mx-auto" aria-label="Global">
+        <div className="flex lg:flex-1">
+          <a href="#" className="-m-1.5 p-1.5 text-xl font-bold tracking-tight text-white flex items-center gap-2">
+            <div className="h-6 w-6 rounded-lg bg-indigo-500 flex items-center justify-center text-xs">▲</div>
+            <span>NEXUS</span>
+          </a>
+        </div>
+        <div className="hidden md:flex md:gap-x-12">
+          <a href="#" className="text-sm font-semibold leading-6 text-slate-300 hover:text-white transition-colors">제품소개</a>
+          <a href="#" className="text-sm font-semibold leading-6 text-slate-300 hover:text-white transition-colors">솔루션</a>
+          <a href="#" className="text-sm font-semibold leading-6 text-slate-300 hover:text-white transition-colors">고객사</a>
+          <a href="#" className="text-sm font-semibold leading-6 text-slate-300 hover:text-white transition-colors font-medium text-indigo-400">가격 안내</a>
+        </div>
+        <div className="flex flex-1 justify-end">
+          <a href="#" className="text-sm font-semibold leading-6 text-white bg-slate-800/60 hover:bg-slate-800 px-4 py-2 rounded-xl border border-slate-700/50 transition-all">
+            로그인
+          </a>
+        </div>
+      </nav>
+    </header>
+  )
 }
+

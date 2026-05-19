@@ -1,80 +1,78 @@
 import Head from 'next/head'
 import Navbar from '../components/Navbar'
-import Hero from '../components/Hero'
-import EventCard from '../components/EventCard'
-import ContactForm from '../components/ContactForm'
-import Features from '../components/Features'
-import Footer from '../components/Footer'
-
-const events = [
-    { id: 1, type: '오리엔테이션', title: '신입 환영 & 네트워킹', date: '6월 1일 (토)', desc: '기초 개념과 활동 로드맵, 커뮤니티 소개를 한 번에.' },
-    { id: 2, type: '워크샵', title: 'React + Tailwind 실전 세션', date: '6월 15일 (토)', desc: '빠른 프로토타입 제작과 UI/UX 개선을 배우는 실습 중심 워크샵.' },
-    { id: 3, type: '해커톤', title: '24시간 팀 해커톤', date: '7월 10일 (토)', desc: '팀 빌딩과 실전 협업으로 서비스 구현 능력을 높입니다.' }
-]
 
 export default function Home() {
-    return (
-        <div>
-            <Head>
-                <title>Frontend Play Ground | 혁신적인 프론트엔드 동아리</title>
-                <meta name="description" content="Frontend Play Ground는 혁신, 모던, 깔끔함을 주제로 한 프론트엔드 동아리입니다." />
-            </Head>
+  return (
+    <div className="min-h-screen bg-slate-950 font-sans text-slate-200 antialiased selection:bg-indigo-500 selection:text-white">
+      <Head>
+        <title>NEXUS — 모던 웹 기술의 시작</title>
+        <meta name="description" content="Next.js와 Tailwind로 만든 모던한 랜딩 페이지 예시" />
+      </Head>
 
-            <Navbar />
+      {/* 네비게이션 바 포함 */}
+      <Navbar />
 
-            <main>
-                <Hero />
-
-                <section id="about" className="container py-20">
-                    <div className="grid gap-12 lg:grid-cols-[0.95fr_0.9fr] items-center">
-                        <div>
-                            <p className="text-sm font-semibold uppercase tracking-[0.28em] text-primary">우리의 철학</p>
-                            <h2 className="section-title mt-4">빠르게 배우고, 협업하며, 실제로 배포하는 동아리</h2>
-                            <p className="section-copy">단순한 스터디가 아니라 제품 제작을 목표로 합니다. 매주 실습과 리뷰, 배포 과정을 거쳐 현업 감각을 끌어올립니다.</p>
-                        </div>
-                        <div className="grid gap-4 sm:grid-cols-2">
-                            <div className="card-soft p-6">
-                                <p className="text-sm text-slate-500">집중 학습</p>
-                                <p className="mt-3 text-xl font-semibold text-slate-900">현업형 실습</p>
-                            </div>
-                            <div className="card-soft p-6">
-                                <p className="text-sm text-slate-500">팀워크</p>
-                                <p className="mt-3 text-xl font-semibold text-slate-900">협업 경험</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <Features />
-
-                <section id="events" className="container py-20">
-                    <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-                        <div>
-                            <p className="text-sm font-semibold uppercase tracking-[0.28em] text-primary">진행 중인 행사</p>
-                            <h2 className="section-title mt-4">다가오는 일정</h2>
-                        </div>
-                        <p className="max-w-xl text-slate-600">실제 서비스처럼 일정 계획을 세우고, 설계부터 배포까지 함께 진행합니다.</p>
-                    </div>
-                    <div className="mt-10 grid gap-6 lg:grid-cols-3">
-                        {events.map(event => (
-                            <EventCard key={event.id} event={event} />
-                        ))}
-                    </div>
-                </section>
-
-                <section id="contact" className="bg-slate-950 py-20 text-white">
-                    <div className="container grid gap-12 lg:grid-cols-[0.9fr_0.7fr] items-center">
-                        <div>
-                            <p className="text-sm font-semibold uppercase tracking-[0.28em] text-primary">문의하기</p>
-                            <h2 className="mt-4 text-4xl font-bold tracking-tight">함께 혁신적인 프로젝트를 시작해봐요</h2>
-                            <p className="mt-6 max-w-xl text-slate-300">가입 문의, 프로젝트 제안, 협업 문의 모두 환영합니다. 아래 폼을 통해 곧바로 연락해주세요.</p>
-                        </div>
-                        <ContactForm />
-                    </div>
-                </section>
-            </main>
-
-            <Footer />
+      {/* 히어로 섹션 본문 */}
+      <section className="relative flex min-h-screen items-center justify-center overflow-hidden px-6 pt-36 pb-24 sm:pt-40 sm:pb-32 lg:px-8">
+        <div className="absolute inset-0 -z-10 flex items-center justify-center">
+          <div className="h-[450px] w-[700px] animate-pulse rounded-full bg-indigo-600/15 blur-[130px] filter" />
+          <div className="ml-40 h-[350px] w-[550px] animate-pulse rounded-full bg-cyan-500/10 blur-[110px] filter delay-75" />
         </div>
-    )
+
+        <div className="absolute inset-0 -z-20 bg-[linear-gradient(to_right,#0f172a_1px,transparent_1px),linear-gradient(to_bottom,#0f172a_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] opacity-60" />
+
+        <div className="mx-auto max-w-3xl text-center z-10">
+          <div className="mb-8 flex justify-center">
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-indigo-500/10 px-3 py-1 text-xs font-medium text-indigo-400 ring-1 ring-inset ring-indigo-500/20 backdrop-blur-md">
+              <span className="h-1.5 w-1.5 rounded-full bg-indigo-400 animate-ping" />
+              What's New v2.0 릴리즈
+            </span>
+          </div>
+
+          <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-6xl bg-gradient-to-b from-white via-slate-100 to-slate-400 bg-clip-text text-transparent leading-[1.15] sm:leading-[1.15]">
+            미래를 이끄는 모던한<br />웹 기술의 시작
+          </h1>
+
+          <p className="mt-6 text-base sm:text-lg leading-8 text-slate-400 max-w-2xl mx-auto font-normal">
+            Next.js와 Tailwind CSS를 활용하여 더 빠르고, 더 아름다우며, 사용성이 뛰어난 디지털 경험을 창조합니다. 지금 당신의 비즈니스를 한 단계 업그레이드하세요.
+          </p>
+
+          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="#get-started"
+              className="w-full sm:w-auto rounded-xl bg-indigo-600 px-6 py-3.5 text-sm font-semibold text-white shadow-xl shadow-indigo-600/20 transition-all duration-200 hover:bg-indigo-500 hover:shadow-indigo-500/30 hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 text-center"
+            >
+              지금 시작하기
+            </a>
+            <a
+              href="#features"
+              className="w-full sm:w-auto group flex items-center justify-center gap-x-1.5 rounded-xl bg-slate-900 px-6 py-3.5 text-sm font-semibold text-slate-300 ring-1 ring-inset ring-slate-800 transition-all duration-200 hover:bg-slate-800 hover:text-white text-center"
+            >
+              자세히 알아보기
+              <span className="inline-block transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true">
+                &rarr;
+              </span>
+            </a>
+          </div>
+
+          <div className="mt-20 border-t border-slate-900 pt-8">
+            <p className="text-xs font-medium uppercase tracking-widest text-slate-500">
+              최고의 성능을 위한 빌트인 시스템
+            </p>
+            <div className="mt-6 flex flex-wrap justify-center items-center gap-x-10 gap-y-4 text-xs sm:text-sm font-medium text-slate-400">
+              <div className="flex items-center gap-2">
+                <span className="text-indigo-400">⚡</span> <span>초고속 SSR 구현</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-indigo-400">🛡️</span> <span>엔터프라이즈 보안</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-indigo-400">📱</span> <span>완벽한 반응형 레이아웃</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  )
 }

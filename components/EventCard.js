@@ -1,19 +1,17 @@
 export default function EventCard({ event }) {
     return (
-        <article className="card p-5">
-            <div className="flex items-start justify-between">
+        <article className="card-soft p-6">
+            <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
                 <div>
-                    <h3 className="text-lg font-semibold mb-1">{event.title}</h3>
-                    <p className="text-sm muted">{event.date}</p>
+                    <p className="text-sm uppercase tracking-[0.2em] text-primary">{event.type}</p>
+                    <h3 className="mt-3 text-2xl font-semibold text-slate-900">{event.title}</h3>
                 </div>
-                <div className="text-xs text-white bg-accent px-3 py-1 rounded-full">모집중</div>
+                <p className="text-sm font-medium text-slate-500">{event.date}</p>
             </div>
-
-            <p className="mt-4 text-gray-700">{event.desc}</p>
-
-            <div className="mt-6 flex items-center justify-between">
-                <button className="text-sm text-primary font-semibold">자세히 보기</button>
-                <button className="btn-primary">참가 신청</button>
+            <p className="mt-5 text-slate-600">{event.desc}</p>
+            <div className="mt-6 flex flex-wrap items-center gap-3">
+                <span className="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">프론트엔드</span>
+                <span className="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">초급/중급</span>
             </div>
         </article>
     )

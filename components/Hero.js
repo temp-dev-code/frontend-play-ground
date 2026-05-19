@@ -1,32 +1,39 @@
 export default function Hero() {
     return (
-        <section className="py-24">
-            <div className="container">
-                <div className="bg-white rounded-3xl shadow-xl p-10 grid md:grid-cols-2 gap-8 items-center">
-                    <div>
-                        <h1 className="text-5xl font-extrabold leading-tight">프론트엔드 개발, 직접 만들어 배웁니다</h1>
-                        <p className="mt-4 text-lg text-gray-600 max-w-lg">Frontend Play Ground는 실무형 프로젝트와 세션으로 빠르게 실력을 쌓을 수 있는 동아리입니다. 기초부터 실전까지 함께합니다.</p>
-
-                        <div className="mt-8 flex flex-wrap gap-3">
-                            <a href="#contact" className="btn-primary inline-block">가입 문의</a>
-                            <a href="#events" className="inline-block px-4 py-2 rounded-lg border text-gray-700">행사 보기</a>
-                            <a href="/" className="inline-block px-4 py-2 rounded-lg text-gray-500">활동 기록 보기</a>
+        <section className="relative overflow-hidden pt-20 pb-24">
+            <div className="absolute inset-x-0 top-0 h-80 bg-gradient-to-r from-primary to-slate-900 opacity-30 blur-3xl" />
+            <div className="container relative">
+                <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] items-center">
+                    <div className="max-w-2xl">
+                        <p className="inline-flex rounded-full border border-white/40 bg-white/70 px-4 py-2 text-sm font-semibold text-slate-900 backdrop-blur">혁신 · 모던 · 깔끔함</p>
+                        <h1 className="mt-8 text-5xl font-extrabold tracking-tight text-slate-950 sm:text-6xl">프론트엔드 감각을 실제 프로젝트로 완성하세요</h1>
+                        <p className="section-copy mt-6">Frontend Play Ground는 최신 웹 기술과 협업 중심 학습으로 동아리 활동을 현대적이고 세련되게 만들어드립니다. 다양하고 실용적인 경험을 통해 성장하는 커뮤니티입니다.</p>
+                        <div className="mt-10 flex flex-wrap gap-4">
+                            <a href="#contact" className="btn-brand">참여 신청</a>
+                            <a href="#program" className="btn-secondary">프로그램 보기</a>
                         </div>
                     </div>
 
-                    <div className="flex justify-end">
-                        <div className="w-full max-w-sm">
-                            <div className="p-4 rounded-2xl bg-gradient-to-br from-primary to-primary-dark text-white mb-4">
-                                <div className="text-sm">다음 모임</div>
-                                <div className="text-2xl font-bold mt-1">오리엔테이션 · 2026-06-01</div>
+                    <div className="relative">
+                        <div className="pointer-events-none absolute -left-12 top-12 h-36 w-36 rounded-full bg-primary/10 blur-2xl" />
+                        <div className="pointer-events-none absolute -right-8 bottom-20 h-44 w-44 rounded-full bg-highlight/15 blur-2xl" />
+                        <div className="card-soft relative overflow-hidden p-8 shadow-soft">
+                            <div className="flex items-center justify-between gap-4 rounded-3xl bg-slate-950 p-6 text-white">
+                                <div>
+                                    <p className="text-sm uppercase tracking-[0.24em] text-slate-300">Next-level UI</p>
+                                    <p className="mt-3 text-xl font-semibold">실습형 디자인 & 개발</p>
+                                </div>
+                                <div className="rounded-3xl bg-white/10 px-4 py-3 text-sm font-semibold">2026 Spring</div>
                             </div>
-
-                            <div className="card p-4">
-                                <div className="text-sm muted">최근 활동</div>
-                                <ul className="mt-3 space-y-2 text-gray-700">
-                                    <li>React 실습 스터디 - 6/15</li>
-                                    <li>UI 디자인 워크숍 - 6/22</li>
-                                </ul>
+                            <div className="mt-6 grid gap-4">
+                                <div className="rounded-3xl bg-white/90 p-5 shadow-sm">
+                                    <p className="text-sm text-slate-500">워크샵</p>
+                                    <p className="mt-2 text-lg font-semibold text-slate-900">3주 집중 프로젝트</p>
+                                </div>
+                                <div className="rounded-3xl bg-white/90 p-5 shadow-sm">
+                                    <p className="text-sm text-slate-500">멘토링</p>
+                                    <p className="mt-2 text-lg font-semibold text-slate-900">실제 코드 리뷰</p>
+                                </div>
                             </div>
                         </div>
                     </div>
